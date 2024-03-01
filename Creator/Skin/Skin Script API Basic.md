@@ -103,9 +103,9 @@ The following APIs are supported starting from 5.3.0
 | RotateY          | Value of rotation around the Y axis                                                      | int                   |
 | Alpha            | Transparency, value 0-100                                                                | int                   |
 | Text             | Text                                                                                     | Only for text modules |
-| **5.3.4** ScaleX | Scale of width                                                                           |                       |
-| **5.3.4** ScaleY | Scale of Height                                                                          |                       |
-| **6.0.0** Scale  | Scale of both Width and Height                                                           |                       |
+| [+ 5.3.4 +] ScaleX | Scale of width                                                                           |                       |
+| [+ 5.3.4 +] ScaleY | Scale of Height                                                                          |                       |
+| [+ 6.0.0 +] Scale  | Scale of both Width and Height                                                           |                       |
 
 ### Module API
 
@@ -167,7 +167,7 @@ The following APIs are supported starting from 5.3.0
 | HitEvent(): hit                            | Get the currently triggered hit event                                                                                                                                                          | Return null in Composer                                                                                                         |
 | Width():int                                | Game window width, return unit value                                                                                                                                                           |                                                                                                                                 |
 | Height(): int                              | Game window height, return unit value                                                                                                                                                          | At present, it returns 1080 as default                                                                                          |
-| **5.4.62** TrackAngle(): int               | Get Key Track Angle                                                                                                                                                                            | Only Key and Slide modes are available, 0 is returned for other modes, and 0 is also returned when the 3D track is not enabled. |
+| [- 5.4.62 -] TrackAngle(): int               | Get Key Track Angle                                                                                                                                                                            | Only Key and Slide modes are available, 0 is returned for other modes, and 0 is also returned when the 3D track is not enabled. |
 | **5.3.1** StartTime(): int                 | Time of the first Note                                                                                                                                                                         | Return 1000 in Composer                                                                                                         |
 | **5.3.1** BpmCount(): int                  | Get the number of bpm records                                                                                                                                                                  | Return 1 in Composer                                                                                                            |
 | **5.3.1** BpmAt(int): bpm                  | Gets the bpm record at the specified index                                                                                                                                                     | The index ranges from 0 to BpmCount-1, and returns bpm = 160 in Composer.                                                       |
