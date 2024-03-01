@@ -7,7 +7,7 @@ Since MalodyV 5.3.0, the skin system supports using scripts to achieve the follo
 1. Dynamically modify all properties of module (such as dynamically calculating size, position, etc. based on device properties) before playing. Set animations for the module.
 2. Dynamically modify the properties of module at every frame throughout the playing.
 3. Dynamically modify the properties of the module when player hits notes.
-
+![](../../Resource/skin_flow_en.png)
 ## Data
 
 ### Module
@@ -84,11 +84,11 @@ The following APIs are supported starting from 5.3.0
 | Function name                           | Definition                                                                               | Remarks                                                                                                       |
 | --------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
 | Find(string): module                    | Find module reference, using module name on the composer panel as parameter              |                                                                                                               |
-| **5.3.4** Clone(module, string): module | Passing module and new name to clone an exist module                                     | Only can be used in Init(). Access to the new module by Find() in other functions. Return itself in Composer. |
-| **5.3.4** Shadow(module, int): module   | Create a shadow of an existing module, with the lifetime(in ms) the new module can exist | Can be used anywhere. Used for particle effect.Return itself in Composer.                                     |
-| **5.4.0** GetString(string): string     | Access predefined string values in Composer                                              | Return empty as default                                                                                       |
-| **5.4.0** GetNumber(string): float      | Access predefined number values in Composer                                              | Return 0 as default                                                                                           |
-| **5.4.0** GetBool(string): bool         | Access predefined boolean values in Composer                                             | Return false as default                                                                                       |
+| [+ 5.3.4 +] Clone(module, string): module | Passing module and new name to clone an exist module                                     | Only can be used in Init(). Access to the new module by Find() in other functions. Return itself in Composer. |
+| [+ 5.3.4 +] Shadow(module, int): module   | Create a shadow of an existing module, with the lifetime(in ms) the new module can exist | Can be used anywhere. Used for particle effect.Return itself in Composer.                                     |
+| [+ 5.4.0 +] GetString(string): string     | Access predefined string values in Composer                                              | Return empty as default                                                                                       |
+| [+ 5.4.0 +] GetNumber(string): float      | Access predefined number values in Composer                                              | Return 0 as default                                                                                           |
+| [+ 5.4.0 +] GetBool(string): bool         | Access predefined boolean values in Composer                                             | Return false as default                                                                                       |
 
 ### Module Property
 
@@ -121,14 +121,14 @@ The following APIs are supported starting from 5.3.0
 | DoHeight(animate):id                         | Add height change animation                                |                                                                                                                         |
 | DoAlpha(animate):id                          | Add transparency changing animation                        |                                                                                                                         |
 | DoRotate(animate):id                         | Add rotation animation                                     |                                                                                                                         |
-| **6.0.0** DoRotateX(animate):id              | Add rotation by X animation                                |                                                                                                                         |
-| **6.0.0** DoRotateY(animate):id              | Add rotation by Y animation                                |                                                                                                                         |
-| **5.3.4** DoScale(animate, animate):id       | Add scale animation                                        |                                                                                                                         |
-| **5.3.4** DoScaleX(animate):id               | Add width scale animation                                  |                                                                                                                         |
-| **5.3.4** DoScaleY(animate):id               | Add height scale animation                                 |                                                                                                                         |
-| **5.3.4** SetColor(r, g, b)                  | Set color, rgb range from 0 to 255                         |                                                                                                                         |
-| **5.4.62** CancelAnimate(id)                 | Cancel the given animation                                 |                                                                                                                         |
-| **6.0.0** SetSlice(left, top, right, bottom) | Set the 9-patches value of image                           |                                                                                                                         |
+| [+ 6.0.0 +] DoRotateX(animate):id              | Add rotation by X animation                                |                                                                                                                         |
+| [+ 6.0.0 +] DoRotateY(animate):id              | Add rotation by Y animation                                |                                                                                                                         |
+| [+ 5.3.4 +] DoScale(animate, animate):id       | Add scale animation                                        |                                                                                                                         |
+| [+ 5.3.4 +] DoScaleX(animate):id               | Add width scale animation                                  |                                                                                                                         |
+| [+ 5.3.4 +] DoScaleY(animate):id               | Add height scale animation                                 |                                                                                                                         |
+| [+ 5.3.4 +] SetColor(r, g, b)                  | Set color, rgb range from 0 to 255                         |                                                                                                                         |
+| [+ 5.4.62 +] CancelAnimate(id)                 | Cancel the given animation                                 |                                                                                                                         |
+| [+ 6.0.0 +] SetSlice(left, top, right, bottom) | Set the 9-patches value of image                           |                                                                                                                         |
 
 ### Hit Event API
 
@@ -137,26 +137,26 @@ The following APIs are supported starting from 5.3.0
 | JudgeResult(): int               | Hit result, meaning of return values see below                                                                                                                                             |                                                                      |
 | Offset(): int                    | Offset between note time and hitted time                                                                                                                                                   | Positive numbers are hitted early. Negative numbers are hitted late. |
 | HitX(): int                      | X coordinate of the hitted Note                                                                                                                                                            |                                                                      |
-| **5.3.2** NoteTime(): int        | Note time of the hitted note                                                                                                                                                               |                                                                      |
-| **5.3.2** NoteWidth(): int       | Note width of the hitted note                                                                                                                                                              | Return 0 if not in Slide mode                                        |
-| **5.3.4** NoteType(): int        | Note type of the hitted note                                                                                                                                                               | See enums value below                                                |
-| **5.4.32** NoteInfo(string): int | Get Additional Notes information---- Arrow：Note Arrow Direction- **5.4.52** Hit: Hit count of Taiko Renda/Balloon notes- **5.4.52** Remain: Remain hit count of Taiko Renda/Balloon notes | Parameters are case insensitive                                      |
+| [+ 5.3.2 +] NoteTime(): int        | Note time of the hitted note                                                                                                                                                               |                                                                      |
+| [+ 5.3.2 +] NoteWidth(): int       | Note width of the hitted note                                                                                                                                                              | Return 0 if not in Slide mode                                        |
+| [+ 5.3.4 +] NoteType(): int        | Note type of the hitted note                                                                                                                                                               | See enums value below                                                |
+| [+ 5.4.32 +] NoteInfo(string): int | Get Additional Notes information---- Arrow：Note Arrow Direction- [+ 5.4.52 +] Hit: Hit count of Taiko Renda/Balloon notes- [+ 5.4.52 +] Remain: Remain hit count of Taiko Renda/Balloon notes | Parameters are case insensitive                                      |
 
 ### Input Event API
 
 | Function name           | Definition                                                                                              | Remarks                                            |
 | ----------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| **5.3.2** HitX(): int   | X coordinate or X mapping of the event                                                                  | Return -1 if players hit outside of the play area. |
-| **6.0.0** HitY(): int   | Y coordinate or the event                                                                               |                                                    |
-| **5.3.2** Type(): int   | Input type, see enums                                                                                   |                                                    |
-| **5.3.4** Source(): int | Input source, which refers to touch finger in most cases.  The same source value means the same finger. | -1 means hit by keyboard.                          |
+| [+ 5.3.2 +] HitX(): int   | X coordinate or X mapping of the event                                                                  | Return -1 if players hit outside of the play area. |
+| [+ 6.0.0 +] HitY(): int   | Y coordinate or the event                                                                               |                                                    |
+| [+ 5.3.2 +] Type(): int   | Input type, see enums                                                                                   |                                                    |
+| [+ 5.3.4 +] Source(): int | Input source, which refers to touch finger in most cases.  The same source value means the same finger. | -1 means hit by keyboard.                          |
 
 ### Audio API
 
 | Function Name             | Definition                                                                                               | Remarks                             |
 | ------------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| **6.0.0** Load(name): res | Load audio resource within skin folder and get the resource id:res                                       | Audio format supported: mp3,ogg,wav |
-| **6.0.0** Play(res, vol)  | Play the audio with the specified resource id, and set the volume---res: resource idvol: volume, [0-100] |                                     |
+| [+ 6.0.0 +] Load(name): res | Load audio resource within skin folder and get the resource id:res                                       | Audio format supported: mp3,ogg,wav |
+| [+ 6.0.0 +] Play(res, vol)  | Play the audio with the specified resource id, and set the volume---res: resource idvol: volume, [0-100] |                                     |
 
 ### Game API
 
@@ -168,17 +168,17 @@ The following APIs are supported starting from 5.3.0
 | Width():int                                | Game window width, return unit value                                                                                                                                                           |                                                                                                                                 |
 | Height(): int                              | Game window height, return unit value                                                                                                                                                          | At present, it returns 1080 as default                                                                                          |
 | [- 5.4.62 -] TrackAngle(): int               | Get Key Track Angle                                                                                                                                                                            | Only Key and Slide modes are available, 0 is returned for other modes, and 0 is also returned when the 3D track is not enabled. |
-| **5.3.1** StartTime(): int                 | Time of the first Note                                                                                                                                                                         | Return 1000 in Composer                                                                                                         |
-| **5.3.1** BpmCount(): int                  | Get the number of bpm records                                                                                                                                                                  | Return 1 in Composer                                                                                                            |
-| **5.3.1** BpmAt(int): bpm                  | Gets the bpm record at the specified index                                                                                                                                                     | The index ranges from 0 to BpmCount-1, and returns bpm = 160 in Composer.                                                       |
-| **5.3.2** InputEvent(): input              | Get the currently triggered input event                                                                                                                                                        | Return null in Composer                                                                                                         |
-| **5.3.4** **5.4.62** SceneScale(): float   | Get Scene Scale                                                                                                                                                                                | Same as Scene Scale in play settings                                                                                            |
-| **5.4.0** IsVersionGE(int, int, int): bool | Is the current version greater than or equal to the specified version                                                                                                                          |                                                                                                                                 |
-| **5.4.32** ChartInfo(string): string       | Get Chart information---- Version: string- Creator: string- Title: string- Artist: string- Bpm: number- Level: number- **5.4.52** Key: number, key tracks- **5.4.52** Note: number, note count | Parameters are case insensitiveReturn empty in Composer                                                                         |
-| **5.4.62** FieldMeta(string): number       | Get the field setting values (Same as value from composer information)---- Angle: Key Track Angle- Scale: Scene Scale- Judge: Judge Position- JudgeY: Taiko Judge Height                       |                                                                                                                                 |
-| **5.4.62** SetFieldMeta(string, number)    | Set field setting value                                                                                                                                                                        | If the value is locked from composer information, the call will be invalid                                                      |
-| **6.0.0** ReadFile(name): string           | Read file from skin or chart folder                                                                                                                                                            | Find file in skin folder first, then chart folder.                                                                              |
-| **6.0.0** Language(): int                  | Get current system language                                                                                                                                                                    | See Enums - Language                                                                                                            |
+| [+ 5.3.1 +] StartTime(): int                 | Time of the first Note                                                                                                                                                                         | Return 1000 in Composer                                                                                                         |
+| [+ 5.3.1 +] BpmCount(): int                  | Get the number of bpm records                                                                                                                                                                  | Return 1 in Composer                                                                                                            |
+| [+ 5.3.1 +] BpmAt(int): bpm                  | Gets the bpm record at the specified index                                                                                                                                                     | The index ranges from 0 to BpmCount-1, and returns bpm = 160 in Composer.                                                       |
+| [+ 5.3.2 +] InputEvent(): input              | Get the currently triggered input event                                                                                                                                                        | Return null in Composer                                                                                                         |
+| [+ 5.3.4 +] [- 5.4.62 -] SceneScale(): float   | Get Scene Scale                                                                                                                                                                                | Same as Scene Scale in play settings                                                                                            |
+| [+ 5.4.0 +] IsVersionGE(int, int, int): bool | Is the current version greater than or equal to the specified version                                                                                                                          |                                                                                                                                 |
+| [+ 5.4.32 +] ChartInfo(string): string       | Get Chart information---- Version: string- Creator: string- Title: string- Artist: string- Bpm: number- Level: number- **5.4.52** Key: number, key tracks- **5.4.52** Note: number, note count | Parameters are case insensitiveReturn empty in Composer                                                                         |
+| [+ 5.4.62 +] FieldMeta(string): number       | Get the field setting values (Same as value from composer information)---- Angle: Key Track Angle- Scale: Scene Scale- Judge: Judge Position- JudgeY: Taiko Judge Height                       |                                                                                                                                 |
+| [+ 5.4.62 +] SetFieldMeta(string, number)    | Set field setting value                                                                                                                                                                        | If the value is locked from composer information, the call will be invalid                                                      |
+| [+ 6.0.0 +] ReadFile(name): string           | Read file from skin or chart folder                                                                                                                                                            | Find file in skin folder first, then chart folder.                                                                              |
+| [+ 6.0.0 +] Language(): int                  | Get current system language                                                                                                                                                                    | See Enums - Language                                                                                                            |
 
 ## Enums
 
@@ -210,21 +210,21 @@ Miss = 4
 
 Flick = 5
 
-**5.3.1** Hold Combo = 6
+[+ 5.3.1 +] Hold Combo = 6
 
-**5.3.4** Wipe = 7
+[+ 5.3.4 +] Wipe = 7
 
-**5.4.6** Combo Break = 8
+[+ 5.4.6 +] Combo Break = 8
 
-**5.4.40** Taiko Big Hit Best = 9
+[+ 5.4.40 +] Taiko Big Hit Best = 9
 
-**5.4.40** Taiko Big Hit Cool = 10
+[+ 5.4.40 +] Taiko Big Hit Cool = 10
 
-**5.4.40** Taiko Renda = 11
+[+ 5.4.40 +] Taiko Renda = 11
 
-**5.4.40** Taiko Balloon Hit = 12
+[+ 5.4.40 +] Taiko Balloon Hit = 12
 
-**5.4.40** Taiko Balloon Pop = 13
+[+ 5.4.40 +] Taiko Balloon Pop = 13
 
 ### Input Type
 
@@ -250,19 +250,19 @@ Flick(Wipe) = 6
 
 Slide = 7
 
-**5.4.40** Taiko Don = 8
+[+ 5.4.40 +] Taiko Don = 8
 
-**5.4.40** Taiko Big Don = 9
+[+ 5.4.40 +] Taiko Big Don = 9
 
-**5.4.40** Taiko Ka = 10
+[+ 5.4.40 +] Taiko Ka = 10
 
-**5.4.40** Taiko Big Ka = 11
+[+ 5.4.40 +] Taiko Big Ka = 11
 
-**5.4.40** Taiko Renda = 12
+[+ 5.4.40 +] Taiko Renda = 12
 
-**5.4.40** Taiko Big Renda = 13
+[+ 5.4.40 +] Taiko Big Renda = 13
 
-**5.4.40** Taiko Balloon = 14
+[+ 5.4.40 +] Taiko Balloon = 14
 
 ### Note Arrow Direction
 
