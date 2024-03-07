@@ -263,6 +263,8 @@ Slide = 7
 [+ 5.4.40 +] Taiko Big Renda = 13
 
 [+ 5.4.40 +] Taiko Balloon = 14
+[+ 6.0.0 +]Osu Slider = 15
+[+ 6.0.0 +]Osu Spinner = 16
 
 ### Note Arrow Direction
 
