@@ -80,6 +80,7 @@ end
 The following APIs are supported starting from 5.3.0
 
 ### Module Management API
+> Example：local light = Module:Find("light")
 
 | Function name                           | Definition                                                                               | Remarks                                                                                                       |
 | --------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -91,6 +92,7 @@ The following APIs are supported starting from 5.3.0
 | [+ 5.4.0 +] GetBool(string): bool         | Access predefined boolean values in Composer                                             | Return false as default                                                                                       |
 
 ### Module Property
+> Example：light.X = 100
 
 | Property name    | Definition                                                                               | Remarks               |
 | ---------------- | ---------------------------------------------------------------------------------------- | --------------------- |
@@ -108,6 +110,7 @@ The following APIs are supported starting from 5.3.0
 | [+ 6.0.0 +] Scale  | Scale of both Width and Height                                                           |                       |
 
 ### Module API
+> Example：light:DoMoveX({start=1000, end=2000, from=0, to=100})
 
 | Function name                                | Definition                                                 | Remarks                                                                                                                 |
 | -------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -131,6 +134,8 @@ The following APIs are supported starting from 5.3.0
 | [+ 6.0.0 +] SetSlice(left, top, right, bottom) | Set the 9-patches value of image                           |                                                                                                                         |
 
 ### Hit Event API
+> Example：local hit = Game:HitEvent()
+> hit:JudgeResult()
 
 | Function name                    | Definition                                                                                                                                                                                 | Remarks                                                              |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- |
@@ -143,6 +148,8 @@ The following APIs are supported starting from 5.3.0
 | [+ 5.4.32 +] NoteInfo(string): int | Get Additional Notes information<br>----<br> Arrow：Note Arrow Direction<br>[+ 5.4.52 +] Hit: Hit count of Taiko Renda/Balloon notes<br> [+ 5.4.52 +] Remain: Remain hit count of Taiko Renda/Balloon notes | Parameters are case insensitive                                      |
 
 ### Input Event API
+> Example：local hit = Game:InputEvent()
+> hit:HitX()
 
 | Function name           | Definition                                                                                              | Remarks                                            |
 | ----------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
@@ -152,6 +159,7 @@ The following APIs are supported starting from 5.3.0
 | [+ 5.3.4 +] Source(): int | Input source, which refers to touch finger in most cases.  The same source value means the same finger. | -1 means hit by keyboard.                          |
 
 ### Audio API
+> Example: Audio:Load("hit.ogg")
 
 | Function Name             | Definition                                                                                               | Remarks                             |
 | ------------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------- |
@@ -159,6 +167,7 @@ The following APIs are supported starting from 5.3.0
 | [+ 6.0.0 +] Play(res, vol)  | Play the audio with the specified resource id, and set the volume<br>---<br>res: resource idvol: volume, [0-100] |                                     |
 
 ### Game API
+> Example:  local w = Game:Width()
 
 | Function name                              | Definition                                                                                                                                                                                     | Remarks                                                                                                                         |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
