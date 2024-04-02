@@ -102,7 +102,7 @@ end
 | GetClickX():int              | 获得点击处的横向单位坐标                             | 点到轨道左侧返回-1<br>点到轨道右侧返回轨道数+1<br>⽐如在4K编辑下，返回5 |
 | GetClickBeat():beat          | 获得点击处的节拍值,对⻬到当前分度                        |                                  |
 | **6.0.0** GetClickBeatFree():beat | 获得点击处的节拍值,对⻬到1/32分度                      | 6.0.0                            |
-| ChartInfo(key):string        | 获取谱⾯信息                                   | 参数不区分⼤⼩写<br>- version:string<br>- creator:string<br>- title:string<br>- artist:string<br>- bpm:string(number)<br>- level:string(number)<br>- key:string(number)，轨道数 |
+| **6.0.0** ChartInfo(key):string        | 获取谱⾯信息                                   | 参数不区分⼤⼩写<br>- version:string<br>- creator:string<br>- title:string<br>- artist:string<br>- bpm:string(number)<br>- level:string(number)<br>- key:string(number)，轨道数 |
 
 ### 审核接⼝
 
