@@ -113,6 +113,16 @@ The following APIs all support undo by default.
 | DeleteNoteSlideBody(id) | Clear the segments of Slide |  |
 | **6.0.0** SetNoteGroup(id,int) | Set the group number of note |  |
 
+### Graphic API
+
+> Using **Editor:** to Access
+
+| Lua function name                  | Definition                          | Remarks                          |
+|------------------------------|----------------------------------|------------------------------|
+| **6.0.0** AddSprite(name,file,parent):mod | Add Sprite to editing area, return a Editor-Specific Module   | - name：string,name for the module, Required<br>- file：string,image filename，Required<br>- parent：string,parent name of the module，Optional |
+| **6.0.0** AddText(name,content):mod | Add Text to editing area, return a Editor-Specific Module   |                              |
+| **6.0.0** RemoveModule(name)      | Remove module by names                       |                              |
+
 ### Auxiliary API
 
 > Using **Editor:** to Access
@@ -168,6 +178,20 @@ The following APIs all support undo by default.
 * Slow down playrate = 8
 * Increase grid scale = 39
 * Decrease grid scale = 40
+
+## Others
+
+### Editor-Specific Module
+Editor-Specific Module is inhertied from Module without animation support, see [Skin-Module](../Skin/Skin%20Script%20API%20Basic.md), The differences are below:
+
+| Param         | Definition                            | Remarks      |
+| ---------------- | --------------------------------------- | ------------ |
+| X                | Percent value of X                      |              |
+| Y                | Invalid                 |              |
+| Beat             | Beat value of Y
+| Width            | Percent value of Width                       |              |
+| Height           | Unit value of Height                        |              |
+| HeightBeat       | Beat value of Height
 
 ## Demo
 
