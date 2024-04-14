@@ -141,8 +141,8 @@ end
 
 | lua函数名                       | 定义                              | 备注                           |
 |------------------------------|----------------------------------|------------------------------|
-| **6.0.0** AddSprite(name,file,parent):mod | 向编辑区添加⾃定义图像，返回标准Module<br>对象。   | - name：string,要添加的图像名，必填<br>- file：string,要添加的图像⽂件名，必填<br>- parent：string,可以指定添加的⽗级，可选 |
-| **6.0.0** AddText(name,content):mod | 向编辑区添加⾃定义⽂本，<br>返回标准Module对象。  |                              |
+| **6.0.0** AddSprite(name,file,parent):mod | 向编辑区添加⾃定义图像，返回Editor定制Module<br>对象。参见后文定制Module一节说明。   | - name：string,要添加的图像名，必填<br>- file：string,要添加的图像⽂件名，必填<br>- parent：string,可以指定添加的⽗级，可选 |
+| **6.0.0** AddText(name,content):mod | 向编辑区添加⾃定义⽂本，<br>返回Editor定制Module<br>对象。参见后文定制Module一节说明。  |                              |
 | **6.0.0** RemoveModule(name)      | 删除⼀个⾃定义对象                       |                              |
 
 ### 辅助接⼝
@@ -199,6 +199,20 @@ end
 - 降低播放速度=8
 - 增加缩放=39
 - 降低缩放=40
+
+## 其他说明
+
+### 定制Module对象
+定制对象继承通用Module的基础属性，参见![皮肤文档-Module](../Skin/皮肤脚本文档-基础.md)，但不支持动画。与通用Module的区别如下：
+
+| 属性名           | 定义                                    | 备注         |
+| ---------------- | --------------------------------------- | ------------ |
+| X                | X 坐标的百分比值                       |              |
+| Y                | 无效                          |              |
+| Beat             | Y方向的Beat值
+| Width            | 宽度的百分比值                        |              |
+| Height           | 高度的单位值                            |              |
+| HeightBeat       | 高度的Beat值
 
 ## 主要API调⽤演⽰
 
