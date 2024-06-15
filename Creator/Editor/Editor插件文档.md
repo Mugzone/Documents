@@ -72,6 +72,18 @@ end
 function OnDragEnd()
 
 end
+
+-- 6.0.42起支持
+function OnKey(key, down)
+end
+
+-- 6.0.42起支持，插件被启动时触发
+function OnActive()
+end
+
+-- 6.0.42起支持，激活状态的插件被禁用时触发
+function OnDeactive()
+end
 ```
 
 ## 接⼝⽂档
@@ -144,6 +156,10 @@ end
 | **6.0.0** AddSprite(name,file,parent):mod | 向编辑区添加⾃定义图像，返回Editor定制Module<br>对象。参见后文定制Module一节说明。   | - name：string,要添加的图像名，必填<br>- file：string,要添加的图像⽂件名，必填<br>- parent：string,可以指定添加的⽗级，可选 |
 | **6.0.0** AddText(name,content):mod | 向编辑区添加⾃定义⽂本，<br>返回Editor定制Module<br>对象。参见后文定制Module一节说明。  |                              |
 | **6.0.0** RemoveModule(name)      | 删除⼀个⾃定义对象                       |                              |
+| **6.0.42** AddSpriteUndo(name,file,parent) | 功能同AddSprite，但支持撤销 | |
+| **6.0.42** AddTextUndo(name,content) | 功能同AddText，但支持撤销 | |
+| **6.0.42** RemoveModuleUndo(name)      | 功能同RemoveModule，但支持撤销 | |
+| **6.0.42** FindModule(name):mod | 根据name查找对象 | | 
 
 ### 辅助接⼝
 > 使⽤**Editor:**访问

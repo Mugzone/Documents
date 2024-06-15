@@ -52,6 +52,19 @@ function OnDragMove()
 end
 function OnDragEnd()
 end
+
+
+-- From 6.0.42
+function OnKey(key, down)
+end
+
+-- From 6.0.42, called when plugin be selected
+function OnActive()
+end
+
+-- From 6.0.42, called when selected plugin be disabled
+function OnDeactive()
+end
 ```
 
 ## API doc
@@ -122,6 +135,10 @@ The following APIs all support undo by default.
 | **6.0.0** AddSprite(name,file,parent):mod | Add Sprite to editing area, return a Editor-Specific Module   | - name：string,name for the module, Required<br>- file：string,image filename，Required<br>- parent：string,parent name of the module，Optional |
 | **6.0.0** AddText(name,content):mod | Add Text to editing area, return a Editor-Specific Module   |                              |
 | **6.0.0** RemoveModule(name)      | Remove module by names                       |                              |
+| **6.0.42** AddSpriteUndo(name,file,parent) | Same to AddSprite, but with Undo support | |
+| **6.0.42** AddTextUndo(name,content) | Same to AddText, but with Undo support | |
+| **6.0.42** RemoveModuleUndo(name)      | Same to RemoveModule, but with Undo support | |
+| **6.0.42** FindModule(name):mod | Find module by name | | 
 
 ### Auxiliary API
 
