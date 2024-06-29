@@ -158,6 +158,7 @@ The following APIs all support undo by default.
 | **6.0.0** WriteFile(name,string) | Write files with given name to chart folder |  |
 | **6.0.22** ReadData(key, psw):string | Read cross-plugin shared data, use the same psw value if share data within a group of plugins | |
 | **6.0.22** WriteData(key, psw, data) | Write value to cross-plugin shared data | |
+| **6.0.42** ReadBytes(name):array   | Read binary content from files in chart folder            |                              |
 
 ## Enums
 

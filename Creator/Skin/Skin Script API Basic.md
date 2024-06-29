@@ -188,6 +188,7 @@ The following APIs are supported starting from 5.3.0
 | [+ 5.4.62 +] SetFieldMeta(string, number)    | Set field setting value                                                                                                                                                                        | If the value is locked from composer information, the call will be invalid                                                      |
 | [+ 6.0.0 +] ReadFile(name): string           | Read file from skin or chart folder                                                                                                                                                            | Find file in skin folder first, then chart folder.                                                                              |
 | [+ 6.0.0 +] Language(): int                  | Get current system language                                                                                                                                                                    | See Enums - Language                                                                                                            |
+| [+ 6.0.42 +]ReadBytes(name):array | Read binary content from file in skin or chart folder  | |
 
 ## Enums
 
