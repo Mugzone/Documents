@@ -154,7 +154,7 @@ The following APIs all support undo by default.
 | SeekTo(number) | Scroll to the specified milliseconds |  |
 | **5.4.32** CallShortcut(int) | Call internal function, see enums below |  |
 | **5.4.72** GetUserInput(default, function) | Get input text from user | default: string, default text<br>function: function(string) callback |
-| **6.0.42** GetUserInput(title, default, function) | Get input text from user |  |
+| **6.0.52** GetUserInput(title, default, function) | Get input text from user |  |
 | **6.0.0** ReadFile(name):string | Read files in chart folder |  |
 | **6.0.0** WriteFile(name,string) | Write files with given name to chart folder |  |
 | **6.0.22** ReadData(key, psw):string | Read cross-plugin shared data, use the same psw value if share data within a group of plugins | |

@@ -174,7 +174,7 @@ end
 | SeekTo(number)               | 滚动到指定毫秒                       |                              |
 | **5.4.32** CallShortcut(int)      | 调⽤内置功能，对应关系⻅枚举定义              |                              |
 | **5.4.72** GetUserInput(default, function) | 获取⼀个⽤⼾输⼊                      | default:string,默认⽂字<br>function:function(string)类型回调 |
-| **6.0.42** GetUserInput(title, default, function) | 获取⼀个⽤⼾输⼊ |  |
+| **6.0.52** GetUserInput(title, default, function) | 获取⼀个⽤⼾输⼊ |  |
 | **6.0.0** ReadFile(name):string   | 读取谱⾯⽬录下指定⽂件                  |                              |
 | **6.0.0** WriteFile(name,string)  | 写⼊内容到⽬录下指定⽂件                 |                              |
 | **6.0.22** ReadData(key, psw):string | 读取一个全局共享数据，不同插件访问相同数据时使用相同psw值 | |
