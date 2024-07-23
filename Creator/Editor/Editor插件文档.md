@@ -147,6 +147,17 @@ end
 | DeleteNoteSlideBody(id)     | 清空Slide类Note的⾝体数据                  |                              |
 | **6.0.0** SetNoteGroup(id,int)   | 设置Note的分组编号                        |                              |
 
+### 时间点接口
+
+> 使⽤**Editor:**访问
+
+| lua函数名                      | 定义                               | 备注                          |
+|-----------------------------|------------------------------------|------------------------------|
+| **6.0.62** AddTime(beat, val) | 添加BPM时间点 | |
+| **6.0.62** DeleteTime(beat) | 删除指定位置的时间点 | |
+| **6.0.62** AddEffect(beat, type, val) | 添加效果点<br>- type: string，取值sv，hs或jump | |
+| **6.0.62** DeleteEffect(beat, type) | 删除指定位置和类型的效果点 | |
+
 ### 图形接⼝
 
 > 使⽤**Editor:**访问

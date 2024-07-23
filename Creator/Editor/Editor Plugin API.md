@@ -126,6 +126,17 @@ The following APIs all support undo by default.
 | DeleteNoteSlideBody(id) | Clear the segments of Slide |  |
 | **6.0.0** SetNoteGroup(id,int) | Set the group number of note |  |
 
+### Timing API
+
+> Using **Editor:** to Access
+
+| Lua function name            | Definition             | Remarks                    |
+|-----------------------------|------------------------------------|------------------------------|
+| **6.0.62** AddTime(beat, val) | Add BPM point | |
+| **6.0.62** DeleteTime(beat) | Remove BPM at giving beat | |
+| **6.0.62** AddEffect(beat, type, val) | Add Effect point<br>- type: string，sv /hs / jump | |
+| **6.0.62** DeleteEffect(beat, type) | Remove Effect at giving beat and type | |
+
 ### Graphic API
 
 > Using **Editor:** to Access
