@@ -125,6 +125,7 @@ The following APIs all support undo by default.
 | SetNoteSlideBodyX(id,int,int) | Set the X offset of the Slide segment |  |
 | DeleteNoteSlideBody(id) | Clear the segments of Slide |  |
 | **6.0.0** SetNoteGroup(id,int) | Set the group number of note |  |
+| **6.0.72** SelectNote(id)  | Select note | |
 
 ### Timing API
 

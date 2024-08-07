@@ -146,6 +146,7 @@ end
 | SetNoteSlideBodyX(id,int,int) | 设置Slide类型Note⾝体指定⽚段的X偏移            |                              |
 | DeleteNoteSlideBody(id)     | 清空Slide类Note的⾝体数据                  |                              |
 | **6.0.0** SetNoteGroup(id,int)   | 设置Note的分组编号                        |                              |
+| **6.0.72** SelectNote(id)  | 选中note | |
 
 ### 时间点接口
 
