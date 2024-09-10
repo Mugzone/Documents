@@ -111,6 +111,7 @@ end
 | GetNoteSlideBodyCount(id):int | 获得Slide类型Note的⾝体⽚段个数                      | 找不到note时返回-1                    |
 | GetNoteSlideBodyBeat(id,int):beat | 获得Slide类型Note的⾝体部分指定⽚段的相<br>对头部的节拍偏移值     | 找不到note,或序号超出范围时返回-1         |
 | GetNoteSlideBodyX(id,int):int | 获得Slide类型Note的⾝体部分指定⽚段的相<br>对头部的X偏移值     | 找不到note,或序号超出范围<br>时返回-1        |
+| **6.0.72** GetNoteGroup(id):int | 获取Note的分组编号   | |
 | GetClickX():int              | 获得点击处的横向单位坐标                             | 点到轨道左侧返回-1<br>点到轨道右侧返回轨道数+1<br>⽐如在4K编辑下，返回5 |
 | GetClickBeat():beat          | 获得点击处的节拍值,对⻬到当前分度                        |                                  |
 | **6.0.0** GetClickBeatFree():beat | 获得点击处的节拍值,对⻬到1/32分度                      | 6.0.0                            |

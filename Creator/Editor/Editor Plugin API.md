@@ -92,6 +92,7 @@ The following interfaces are not specifically specified, and are supported since
 | GetNoteSlideBodyCount(id):int | Get the number of body segments of Slide | Returns -1 if note is not found |
 | GetNoteSlideBodyBeat(id,int): beat | Gets the beat offset value of the segment relative to the head | Note not found, or returns -1 when the index is out of range |
 | GetNoteSlideBodyX(id,int):int | Gets the X offset value of the segment relative to the head | Note not found, or returns -1 when the sequence number is out of range |
+| **6.0.72** GetNoteGroup(id):int | Get the group number of note  | |
 | GetClickX():int | Get the horizontal unit coordinates at the click position | Point to the left of the track to return -1. Point to the right side of the track Return track number + 1. For example, under 4K editing, return 5 |
 | GetClickBeat():beat | Get the beat value at the click position | Returns all -1 when note is not found |
 | **6.0.0** GetClickBeatFree():beat | Get the beat value at the click position, align to 1/32 divide | 6.0.0 |
