@@ -138,6 +138,10 @@ The following APIs all support undo by default.
 | **6.0.62** DeleteTime(beat) | Remove BPM at giving beat | |
 | **6.0.62** AddEffect(beat, type, val) | Add Effect point<br>- type: string，sv /hs / jump | |
 | **6.0.62** DeleteEffect(beat, type) | Remove Effect at giving beat and type | |
+| **6.0.72** GetTimeCount():int | Current total number of BPMs | |
+| **6.0.72** GetEffectCount():int | Current total number of Effects | | 
+| **6.0.72** GetTimeAt(int):beat | Get the BPM by index | |
+| **6.0.72** GetEffectAt(int):effect | Get the effect by index | |
 
 ### Graphic API
 
@@ -152,6 +156,7 @@ The following APIs all support undo by default.
 | **6.0.42** AddTextUndo(name,content) | Same to AddText, but with Undo support | |
 | **6.0.42** RemoveModuleUndo(name)      | Same to RemoveModule, but with Undo support | |
 | **6.0.42** FindModule(name):mod | Find module by name | | 
+
 
 ### Auxiliary API
 

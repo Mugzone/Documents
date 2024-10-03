@@ -159,6 +159,10 @@ end
 | **6.0.62** DeleteTime(beat) | 删除指定位置的时间点 | |
 | **6.0.62** AddEffect(beat, type, val) | 添加效果点<br>- type: string，取值sv，hs或jump | |
 | **6.0.62** DeleteEffect(beat, type) | 删除指定位置和类型的效果点 | |
+| **6.0.72** GetTimeCount():int | 获取当前BPM时间点数量 | |
+| **6.0.72** GetEffectCount():int | 获取当前效果点数量 | | 
+| **6.0.72** GetTimeAt(int):beat | 获取按序号在第int位的BPM信息 | |
+| **6.0.72** GetEffectAt(int):effect | 获取按序号在第int位的效果点信息 | |
 
 ### 图形接⼝
 
