@@ -29,6 +29,29 @@ The Editor uses lots of beat values, such as 2:1/4, which means that the second 
 
 This structure is called **beat**
 
+
+### BPM
+```lua
+{
+    beat = {beat=2, numor=0, denom=4},
+    bpm = 160,
+    delay = 0
+}
+```
+
+This structure is called**bpm**
+
+### Effect
+```lua
+{
+    beat = {beat=2, numor=0, denom=4},
+    type = "hs",
+    value = 4
+}
+```
+
+This structure is called**effect**
+
 ## Script template
 
 ```lua
@@ -140,7 +163,7 @@ The following APIs all support undo by default.
 | **6.0.62** DeleteEffect(beat, type) | Remove Effect at giving beat and type | |
 | **6.0.72** GetTimeCount():int | Current total number of BPMs | |
 | **6.0.72** GetEffectCount():int | Current total number of Effects | | 
-| **6.0.72** GetTimeAt(int):beat | Get the BPM by index | |
+| **6.0.72** GetTimeAt(int):bpm | Get the BPM by index | |
 | **6.0.72** GetEffectAt(int):effect | Get the effect by index | |
 
 ### Graphic API
