@@ -108,6 +108,7 @@ The following APIs are supported starting from 5.3.0
 | [+ 5.3.4 +] ScaleX | Scale of width                                                                           |                       |
 | [+ 5.3.4 +] ScaleY | Scale of Height                                                                          |                       |
 | [+ 6.0.0 +] Scale  | Scale of both Width and Height                                                           |                       |
+| [+ 6.2.2 +] Value  | Value of mask image      |                       |
 
 ### Module API
 > Example：light:DoMoveX({start=1000, end=2000, from=0, to=100})
