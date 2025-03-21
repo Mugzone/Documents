@@ -161,7 +161,7 @@ Consider that there are usually hundreds of notes in chart, and each note needs 
 The left note consists of 2 images, named structure A. The right note consists of 3 images, named structure B. How can the engine reuse containers properly while the structure of each note is known to the creator of the skin only? Therefore, the engine needs to know the type of each unique structure, in the following code:
 ```lua
 function OnDrawNote(info)
-    -- 根据Note类型设置容器
+    -- get container by note type
     if (info.type == 1) then
         root = Note:GetNoteModule("type-A")
     else
@@ -193,7 +193,7 @@ In Free Mode, the script can calculate score by itself and use all kinds of modu
 
 ## Demo
 ```lua
--- 只兼容4K Key谱
+-- only for 4K charts
 function CanPlay()
     key = tonumber(Chart:ChartInfo("key"))
     if (key == 4) then
@@ -205,11 +205,11 @@ end
 
 function OnDrawNote(info)
     if(info.type == 1) then
-        -- 普通note是一个单图
+        -- a single image for normal notes
         root = Note:GetNoteModule("normal")
         Note:AddSprite("bg", "note-1.png")
     else
-        -- Hold有头，尾，身体组成，头部有个小星星装饰
+        -- head/rear/body for hold notes
         root = Note:GetNoteModule("hold")
         body = Note:AddSprite("bg", "note-2.png")
         head = Note:AddSprite("head", "note-2-head.png")
@@ -219,7 +219,7 @@ function OnDrawNote(info)
 end
 
 function OnNoteMove(info, mod, p)
-    -- note缩放从0开始，在打击时刻变成刚好1倍
+    -- note scales from 0, and become 1 at the judge time
     if (p[0] < 1) then
         mod.Scale = p[0]
     else
