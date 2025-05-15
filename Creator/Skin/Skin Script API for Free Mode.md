@@ -13,18 +13,25 @@ Note data, also called info, with the following structure:
 ```lua
 {
     nid = 0,  -- note id，unique
+    group = 0,  -- note group
     type = 0,  -- See enums - Note type
     time = 160,  -- time for judgement
     endtime = 200,  -- end time for hold notes
     width = 40,
     arrow = 0,  -- See enums - Note arrow
     x = 1, -- Note position x，start from 1
+    y = 1, -- Note position y，only valid for osu charts
+    repeats = 0, -- only valid for osu charts, slider repeats
     segments = list -- slide segments，
+    sample = "aaa.ogg" -- Note sample filename, added in 6.3.32
 }
 
 -- slide segments data
+-- for slide: x and time are offset related to it's start point
+-- for catch: x and y are the logic position of note
 {
-    x = 1,   -- x offset related to main x
+    x = 1,   -- 
+    y = 1,
     time = 233  --time offset related to main time
 }
 ```
