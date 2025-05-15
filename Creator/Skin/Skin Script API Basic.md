@@ -165,6 +165,7 @@ The following APIs are supported starting from 5.3.0
 | Function Name             | Definition                                                                                               | Remarks                             |
 | ------------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------- |
 | [+ 6.0.0 +] Load(name): res | Load audio resource within skin folder and get the resource id:res                                       | Audio format supported: mp3,ogg,wav |
+| [+ 6.3.32 +] Load(name): res | Load audio resource within chart folder and get the resource id:res                                       | Audio format supported: mp3,ogg,wav |
 | [+ 6.0.0 +] Play(res, vol)  | Play the audio with the specified resource id, and set the volume<br>---<br>res: resource idvol: volume, [0-100] |                                     |
 
 ### Game API
