@@ -219,7 +219,7 @@ end
 | **6.0.22** ReadData(key, psw):string | 读取一个全局共享数据，不同插件访问相同数据时使用相同psw值 | |
 | **6.0.22** WriteData(key, psw, data) | 写入一个全局共享数据 | |
 | **6.0.42** ReadBytes(name):array   | 读取谱⾯⽬录下指定⽂件的二进制内容                  |                              |
-
+| **6.4.2** ShowTip(string)   | 在鼠标旁边显示跟随的文本内容 | |
 ## 各类枚举值
 
 ### Note类型
