@@ -120,6 +120,7 @@ The following interfaces are not specifically specified, and are supported since
 | GetClickBeat():beat | Get the beat value at the click position | Returns all -1 when note is not found |
 | **6.0.0** GetClickBeatFree():beat | Get the beat value at the click position, align to 1/32 divide | 6.0.0 |
 | **6.0.0** ChartInfo(key):string        | Get chart meta                                   | - version:string<br>- creator:string<br>- title:string<br>- artist:string<br>- bpm:string(number)<br>- level:string(number)<br>- key:string(number)，key tracks |
+| **6.5.12** GetSystemTime():int | Get system unix time | |
 
 ### Review API
 

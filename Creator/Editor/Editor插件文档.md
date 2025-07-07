@@ -138,7 +138,7 @@ end
 | GetClickBeat():beat          | 获得点击处的节拍值,对⻬到当前分度                        |                                  |
 | **6.0.0** GetClickBeatFree():beat | 获得点击处的节拍值,对⻬到1/32分度                      | 6.0.0                            |
 | **6.0.0** ChartInfo(key):string        | 获取谱⾯信息                                   | 参数不区分⼤⼩写<br>- version:string<br>- creator:string<br>- title:string<br>- artist:string<br>- bpm:string(number)<br>- level:string(number)<br>- key:string(number)，轨道数 |
-
+| **6.5.12** GetSystemTime():int | 获得系统Unix时间值  | |
 ### 审核接⼝
 
 > 使⽤**Review:**访问
