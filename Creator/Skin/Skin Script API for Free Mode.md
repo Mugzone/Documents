@@ -76,7 +76,7 @@ function OnKey()
 end
 
 -- If the script declares this function, the result will not be automatically showed when the play ends
--- optional，6.5.32起可用
+-- optional，Available from 6.5.32
 function OnFinish()
 end
 ```
