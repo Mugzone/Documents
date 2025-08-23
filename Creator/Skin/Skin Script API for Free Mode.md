@@ -74,6 +74,11 @@ end
 -- optional, if raw keyboard input is not needed, do not declare the function
 function OnKey()
 end
+
+-- If the script declares this function, the result will not be automatically showed when the play ends
+-- optional，6.5.32起可用
+function OnFinish()
+end
 ```
 
 ## API
