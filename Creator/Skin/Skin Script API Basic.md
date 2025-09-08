@@ -73,6 +73,11 @@ end
 -- Ignored in composer preview
 function OnInput()
 end
+
+-- Write custom message into Replay files at the time of playing finished
+-- return：string
+function ReportCustomInfo()
+end
 ```
 
 ## API Reference
@@ -191,6 +196,7 @@ The following APIs are supported starting from 5.3.0
 | [+ 6.0.0 +] ReadFile(name): string           | Read file from skin or chart folder                                                                                                                                                            | Find file in skin folder first, then chart folder.                                                                              |
 | [+ 6.0.0 +] Language(): int                  | Get current system language                                                                                                                                                                    | See Enums - Language                                                                                                            |
 | [+ 6.0.42 +]ReadBytes(name):array | Read binary content from file in skin or chart folder  | |
+| [+ 6.6.12 +]CustomInfo():string   | Read custom message written by ReportCustomInfo | | 
 
 ## Enums
 
