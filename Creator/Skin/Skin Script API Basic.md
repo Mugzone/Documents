@@ -197,6 +197,7 @@ The following APIs are supported starting from 5.3.0
 | [+ 6.0.0 +] Language(): int                  | Get current system language                                                                                                                                                                    | See Enums - Language                                                                                                            |
 | [+ 6.0.42 +]ReadBytes(name):array | Read binary content from file in skin or chart folder  | |
 | [+ 6.6.12 +]CustomInfo():string   | Read custom message written by ReportCustomInfo | | 
+| [+ 6.6.22 +]FileHash(name): string | Get MD5 of the file | |
 
 ## Enums
 
