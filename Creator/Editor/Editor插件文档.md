@@ -220,6 +220,8 @@ end
 | **6.0.22** WriteData(key, psw, data) | 写入一个全局共享数据 | |
 | **6.0.42** ReadBytes(name):array   | 读取谱⾯⽬录下指定⽂件的二进制内容                  |                              |
 | **6.4.2** ShowTip(string)   | 在鼠标旁边显示跟随的文本内容 | |
+| **6.6.22** ReadChartCustom(name): string | 获取谱面的自定义数据 | |
+| **6.6.22** WriteChartCustom(name): string | 向谱面写入自定义数据 | |
 ## 各类枚举值
 
 ### Note类型
