@@ -79,6 +79,11 @@ end
 -- optional，Available from 6.5.32
 function OnFinish()
 end
+
+-- From 6.6.43, HTTP response callback. Called when request finishes (both success and failure).
+-- Optional. If omitted, requests can still be sent but no response callback will be received.
+function OnResponse(tag, content)
+end
 ```
 
 ## API
@@ -136,6 +141,19 @@ All APIs cannot be used in Composer and with no errors.
 |SetNoteFinish(nid)|Set the note(by nid) has been judged||
 |FindNoteByTime(lower, upper): info[]|Query the note in current time plus range [lower, upper] and return the note info array|Find only the visible notes and exclude notes marked as finished|
 |SetMissTime(int)|Set the time for auto miss||
+
+
+### Network API
+> Example: Network:DoRequest("demo", "https://example.com", "GET", "")
+
+|Function|Definition|Remarks|
+|- |- |- |
+|**6.6.43** DoRequest(tag, url, method, data)|Send an async HTTP request with parameters:<br>---<br>tag: string, request tag, returned as-is in callback<br>url: string, absolute request URL<br>method: string, HTTP method, supports GET/POST (case-insensitive), empty means GET<br>data: string, request payload, supports JSON object string or query string (e.g. `a=1&b=2`)|Only available at runtime in free mode. No effect in Composer.|
+
+Callback behavior:
+- Use `OnResponse(tag, content)` to receive result (both success and failure).
+- On success, `content` is the raw response body text from server.
+- On failure, `content` is a JSON string: `{"code": <error_code>, "message": "..."}`.
 
 ### Hit Event API
 > Extend basic hit event API

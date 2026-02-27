@@ -106,6 +106,11 @@ end
 -- 6.0.42起支持，激活状态的插件被禁用时触发
 function OnDeactive()
 end
+
+-- 6.6.43起支持，网络请求结果回调。请求完成（成功或失败）后触发
+-- 可选，如果不声明该函数，将不会收到网络回包
+function OnResponse(tag, content)
+end
 ```
 
 ## 接⼝⽂档
@@ -222,6 +227,14 @@ end
 | **6.4.2** ShowTip(string)   | 在鼠标旁边显示跟随的文本内容 | |
 | **6.6.22** ReadChartCustom(name): string | 获取谱面的自定义数据 | |
 | **6.6.22** WriteChartCustom(name): string | 向谱面写入自定义数据 | |
+| **6.6.43** DoRequest(tag, url, method, data) | 发起异步HTTP请求 | - tag: string, 请求标记，会在回调原样返回<br>- url: string, 完整请求地址<br>- method: string, 支持GET/POST（不区分大小写），为空时按GET处理<br>- data: string, 支持 JSON Object 字符串或 query string（如 `a=1&b=2`） |
+
+
+网络回调说明：
+- 通过 `OnResponse(tag, content)` 接收请求结果（无论成功或失败）。
+- 成功时，`content` 为服务端返回的原始文本。
+- 失败时，`content` 为JSON字符串：`{"code": <错误码>, "message": "..."}`。
+
 ## 各类枚举值
 
 ### Note类型
